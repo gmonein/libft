@@ -17,7 +17,9 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <limits.h>
-
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1
+# endif
 # define BUFF_SIZE 3
 
 int				get_next_line(int const fd, char **line);
