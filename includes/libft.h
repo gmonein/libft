@@ -6,7 +6,7 @@
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/08 06:10:07 by gmonein           #+#    #+#             */
-/*   Updated: 2017/08/21 03:26:40 by gmonein          ###   ########.fr       */
+/*   Updated: 2017/11/04 17:27:56 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,8 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcat(char *dst, char *src, size_t n);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strduptochar(char *str, char c);
+void			ft_deldoubletab(void ***tab);
+char			*ft_strndup(char *str, size_t len);
 
 #endif

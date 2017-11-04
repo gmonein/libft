@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_free_double_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/15 03:04:02 by gmonein           #+#    #+#             */
-/*   Updated: 2017/10/31 16:18:15 by gmonein          ###   ########.fr       */
+/*   Created: 2017/11/04 17:12:21 by gmonein           #+#    #+#             */
+/*   Updated: 2017/11/04 17:15:59 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_deldoubletab(void ***tab)
 {
-	while (lst)
+	int		i;
+
+	i = 0;
+	if (*tab)
 	{
-		f(lst);
-		lst = lst->next;
+		while ((*tab)[i])
+			ft_memdel(&((*tab)[i]));
+		*tab = NULL;
 	}
 }

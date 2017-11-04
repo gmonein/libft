@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/15 03:04:02 by gmonein           #+#    #+#             */
-/*   Updated: 2017/10/31 16:18:15 by gmonein          ###   ########.fr       */
+/*   Created: 2017/11/04 17:24:15 by gmonein           #+#    #+#             */
+/*   Updated: 2017/11/04 17:27:59 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+char	*ft_strndup(char *str, size_t len)
 {
-	while (lst)
-	{
-		f(lst);
-		lst = lst->next;
-	}
+	char	*res;
+	int		real_len;
+
+	if (!str || !len)
+		return (NULL);
+	real_len = ft_strlen(str);
+	real_len = (real_len > len ? len : real_len);
+	res = (char *)malloc(sizeof(char) * (real_len + 1));
+	ft_memcpy(res, str, sizeof(char) * real_len);
+	res[real_len] = '\0';
+	return (res);
 }

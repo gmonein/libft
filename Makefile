@@ -6,7 +6,7 @@
 #    By: gmonein <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 06:09:56 by gmonein           #+#    #+#              #
-#    Updated: 2017/04/26 15:57:08 by gmonein          ###   ########.fr        #
+#    Updated: 2017/11/04 17:28:10 by gmonein          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,11 @@ SRC = get_next_line.c \
 	ft_tolower.c \
 	ft_toupper.c \
 	ft_uitoa_base.c \
-	ft_strjoin.c
+	ft_strjoin.c \
+	ft_strduptochar.c \
+	ft_strdupdoubletab.c \
+	ft_deldoubletab.c \
+	ft_strndup.c
 
 OBJ = $(SRC:.c=.o)
 
