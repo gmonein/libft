@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_multiputstr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 16:56:35 by gmonein           #+#    #+#             */
-/*   Updated: 2017/11/04 18:10:58 by gmonein          ###   ########.fr       */
+/*   Created: 2017/11/04 18:53:50 by gmonein           #+#    #+#             */
+/*   Updated: 2017/11/04 18:54:30 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void		ft_multiputstr_fd(char **str, int fd)
 {
-	while (*str != (char)c && *str != '\0')
+	if (!str)
+		return ;
+	while (*str)
+	{
+		ft_putstr_fd(*str, fd);
 		str++;
-	if (*str == (char)c)
-		return ((char *)str);
-	return (NULL);
+	}
 }

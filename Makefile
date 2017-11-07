@@ -6,7 +6,7 @@
 #    By: gmonein <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 06:09:56 by gmonein           #+#    #+#              #
-#    Updated: 2017/11/04 17:28:10 by gmonein          ###   ########.fr        #
+#    Updated: 2017/11/04 18:55:10 by gmonein          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,11 @@ SRC = get_next_line.c \
 	ft_strduptochar.c \
 	ft_strdupdoubletab.c \
 	ft_deldoubletab.c \
-	ft_strndup.c
+	ft_strndup.c \
+	ft_strchrstr.c \
+	ft_multijoin.c \
+	ft_multiputstr.c \
+	ft_multiputstr_fd.c
 
 OBJ = $(SRC:.c=.o)
 

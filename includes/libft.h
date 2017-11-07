@@ -6,7 +6,7 @@
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/08 06:10:07 by gmonein           #+#    #+#             */
-/*   Updated: 2017/11/04 17:27:56 by gmonein          ###   ########.fr       */
+/*   Updated: 2017/11/05 18:15:42 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,15 @@ typedef struct	s_list
 	void		*past;
 	void		*begin;
 }				t_list;
+
+typedef struct	s_strlist
+{
+	char		*content;
+	size_t		content_size;
+	void		*next;
+	void		*past;
+	void		*begin;
+}				t_strlist;
 
 void			ft_bzero(void *s, size_t n);
 void			ft_lstadd(t_list **alst, t_list *ne);
@@ -101,5 +110,10 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strduptochar(char *str, char c);
 void			ft_deldoubletab(void ***tab);
 char			*ft_strndup(char *str, size_t len);
+void			ft_putendl_fd(char const *s, int fd);
+char			*ft_strchrstr(char *str, char *find);
+char			*ft_multijoin(char **to_join);
+void			ft_multiputstr(char **str);
+void			ft_multiputstr_fd(char **str, int fd);
 
 #endif

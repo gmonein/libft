@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_multijoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/09 21:34:29 by gmonein           #+#    #+#             */
-/*   Updated: 2017/11/05 21:30:33 by gmonein          ###   ########.fr       */
+/*   Created: 2017/11/04 18:17:04 by gmonein           #+#    #+#             */
+/*   Updated: 2017/11/04 18:20:40 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-char		*ft_strcpy(char *dest, const char *src)
+char		*ft_multijoin(char **to_join)
 {
 	int		i;
+	size_t	len;
+	char	*res;
 
-	i = 0;
-	while (src[i])
+	i = -1;
+	if (!to_join)
+		return (NULL);
+	len = 0;
+	while (to_join[++i])
+		len += ft_strlen(to_join[i]);
+	if (!(res = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	i = -1;
+	len = 0;
+	while (to_join[++i])
 	{
-		dest[i] = src[i];
-		i++;
+		ft_strcpy(res + len, to_join[i]);
+		len += ft_strlen(to_join[i]);
 	}
-	dest[i] = '\0';
-	return (dest);
+	res[len] = '\0';
+	return (res);
 }

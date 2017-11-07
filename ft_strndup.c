@@ -6,7 +6,7 @@
 /*   By: gmonein <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 17:24:15 by gmonein           #+#    #+#             */
-/*   Updated: 2017/11/04 17:27:59 by gmonein          ###   ########.fr       */
+/*   Updated: 2017/11/04 23:10:04 by gmonein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strndup(char *str, size_t len)
 {
 	char	*res;
-	int		real_len;
+	size_t	real_len;
 
 	if (!str || !len)
 		return (NULL);
